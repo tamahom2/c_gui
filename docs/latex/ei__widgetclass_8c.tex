@@ -1,0 +1,105 @@
+\hypertarget{ei__widgetclass_8c}{}\doxysection{ei\+\_\+widgetclass.\+c File Reference}
+\label{ei__widgetclass_8c}\index{ei\_widgetclass.c@{ei\_widgetclass.c}}
+
+
+Definition and registration of widget classes.  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hw\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+draw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+widgetclass.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+implementation.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{ei__widgetclass_8c_a53d6c6223218ced0fb2beeea54b53faa}{ei\+\_\+widget\+\_\+struct\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the opaque struct that is pointed to by \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widgetclass_8c_af742f16921cbf9c4a1a662ade31d91cc}{ei\+\_\+widgetclass\+\_\+register}} (\mbox{\hyperlink{structei__widgetclass__t}{ei\+\_\+widgetclass\+\_\+t}} $\ast$widgetclass)
+\begin{DoxyCompactList}\small\item\em Registers a class to the program so that widgets of this class can be created with \mbox{\hyperlink{ei__widget_8c_af05d9b442d1c9ac845dc74d64f7f7239}{ei\+\_\+widget\+\_\+create}}. This must be done only once per widget class in the application. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structei__widgetclass__t}{ei\+\_\+widgetclass\+\_\+t}} $\ast$ \mbox{\hyperlink{ei__widgetclass_8c_ace2d081c759cd60067e1290e64559770}{ei\+\_\+widgetclass\+\_\+from\+\_\+name}} (\mbox{\hyperlink{ei__types_8h_a54e9efab809a177e0b5df09529a6d32c}{ei\+\_\+const\+\_\+string\+\_\+t}} name)
+\begin{DoxyCompactList}\small\item\em Returns the structure describing a class, from its name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structei__widgetclass__t}{ei\+\_\+widgetclass\+\_\+t}} $\ast$ \mbox{\hyperlink{ei__widgetclass_8c_a36be70e1a10bfdb0e525a6f1ecaaf4f8}{ROOT}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition and registration of widget classes. 
+
+\begin{DoxyAuthor}{Author}
+Created by François Bérard on 02.\+12.\+11. Copyright 2011 Ensimag. All rights reserved. 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ei__widgetclass_8c_a53d6c6223218ced0fb2beeea54b53faa}\label{ei__widgetclass_8c_a53d6c6223218ced0fb2beeea54b53faa}} 
+\index{ei\_widgetclass.c@{ei\_widgetclass.c}!ei\_widget\_struct\_size@{ei\_widget\_struct\_size}}
+\index{ei\_widget\_struct\_size@{ei\_widget\_struct\_size}!ei\_widgetclass.c@{ei\_widgetclass.c}}
+\doxysubsubsection{\texorpdfstring{ei\_widget\_struct\_size()}{ei\_widget\_struct\_size()}}
+{\footnotesize\ttfamily size\+\_\+t ei\+\_\+widget\+\_\+struct\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the size of the opaque struct that is pointed to by \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}. 
+
+
+
+Definition at line 20 of file ei\+\_\+widgetclass.\+c.
+
+\mbox{\Hypertarget{ei__widgetclass_8c_ace2d081c759cd60067e1290e64559770}\label{ei__widgetclass_8c_ace2d081c759cd60067e1290e64559770}} 
+\index{ei\_widgetclass.c@{ei\_widgetclass.c}!ei\_widgetclass\_from\_name@{ei\_widgetclass\_from\_name}}
+\index{ei\_widgetclass\_from\_name@{ei\_widgetclass\_from\_name}!ei\_widgetclass.c@{ei\_widgetclass.c}}
+\doxysubsubsection{\texorpdfstring{ei\_widgetclass\_from\_name()}{ei\_widgetclass\_from\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structei__widgetclass__t}{ei\+\_\+widgetclass\+\_\+t}}$\ast$ ei\+\_\+widgetclass\+\_\+from\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__types_8h_a54e9efab809a177e0b5df09529a6d32c}{ei\+\_\+const\+\_\+string\+\_\+t}}}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns the structure describing a class, from its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the class of widget.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The structure describing the class. 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file ei\+\_\+widgetclass.\+c.
+
+\mbox{\Hypertarget{ei__widgetclass_8c_af742f16921cbf9c4a1a662ade31d91cc}\label{ei__widgetclass_8c_af742f16921cbf9c4a1a662ade31d91cc}} 
+\index{ei\_widgetclass.c@{ei\_widgetclass.c}!ei\_widgetclass\_register@{ei\_widgetclass\_register}}
+\index{ei\_widgetclass\_register@{ei\_widgetclass\_register}!ei\_widgetclass.c@{ei\_widgetclass.c}}
+\doxysubsubsection{\texorpdfstring{ei\_widgetclass\_register()}{ei\_widgetclass\_register()}}
+{\footnotesize\ttfamily void ei\+\_\+widgetclass\+\_\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structei__widgetclass__t}{ei\+\_\+widgetclass\+\_\+t}} $\ast$}]{widgetclass }\end{DoxyParamCaption})}
+
+
+
+Registers a class to the program so that widgets of this class can be created with \mbox{\hyperlink{ei__widget_8c_af05d9b442d1c9ac845dc74d64f7f7239}{ei\+\_\+widget\+\_\+create}}. This must be done only once per widget class in the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widgetclass} & The structure describing the class. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file ei\+\_\+widgetclass.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ei__widgetclass_8c_a36be70e1a10bfdb0e525a6f1ecaaf4f8}\label{ei__widgetclass_8c_a36be70e1a10bfdb0e525a6f1ecaaf4f8}} 
+\index{ei\_widgetclass.c@{ei\_widgetclass.c}!ROOT@{ROOT}}
+\index{ROOT@{ROOT}!ei\_widgetclass.c@{ei\_widgetclass.c}}
+\doxysubsubsection{\texorpdfstring{ROOT}{ROOT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structei__widgetclass__t}{ei\+\_\+widgetclass\+\_\+t}}$\ast$ ROOT = NULL}
+
+
+
+Definition at line 18 of file ei\+\_\+widgetclass.\+c.
+

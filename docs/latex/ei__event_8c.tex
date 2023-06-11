@@ -1,0 +1,115 @@
+\hypertarget{ei__event_8c}{}\doxysection{ei\+\_\+event.\+c File Reference}
+\label{ei__event_8c}\index{ei\_event.c@{ei\_event.c}}
+{\ttfamily \#include \char`\"{}ei\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+widget.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+application.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+implementation.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ei__event_8c_a939d0278da85e35f45e58326d1182b00}{ei\+\_\+event\+\_\+set\+\_\+active\+\_\+widget}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget)
+\item 
+\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} \mbox{\hyperlink{ei__event_8c_a929e765ce56f1902f9873fb5bc3eec5e}{ei\+\_\+event\+\_\+get\+\_\+active\+\_\+widget}} (void)
+\item 
+void \mbox{\hyperlink{ei__event_8c_ab6fbe051400528f4a8201550f2817403}{ei\+\_\+event\+\_\+set\+\_\+default\+\_\+handle\+\_\+func}} (\mbox{\hyperlink{ei__event_8h_a60fc3d9fa221c2b515e5a7044b2c7452}{ei\+\_\+default\+\_\+handle\+\_\+func\+\_\+t}} func)
+\item 
+\mbox{\hyperlink{ei__event_8h_a60fc3d9fa221c2b515e5a7044b2c7452}{ei\+\_\+default\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{ei__event_8c_a6e8c3b68b3e4c4f55a1d06cd9e0dcfb5}{ei\+\_\+event\+\_\+get\+\_\+default\+\_\+handle\+\_\+func}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ei__event_8h_a60fc3d9fa221c2b515e5a7044b2c7452}{ei\+\_\+default\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{ei__event_8c_a7a77a76fc1e303ce403bb1d9c8cb4654}{DEFAULT\+\_\+\+HANDLE\+\_\+\+FUNC}} = NULL
+\item 
+\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} \mbox{\hyperlink{ei__event_8c_a9a4f822e380f16c3d8407eac69d3d334}{ACTIVE\+\_\+\+WIDGET}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ei__event_8c_a929e765ce56f1902f9873fb5bc3eec5e}\label{ei__event_8c_a929e765ce56f1902f9873fb5bc3eec5e}} 
+\index{ei\_event.c@{ei\_event.c}!ei\_event\_get\_active\_widget@{ei\_event\_get\_active\_widget}}
+\index{ei\_event\_get\_active\_widget@{ei\_event\_get\_active\_widget}!ei\_event.c@{ei\_event.c}}
+\doxysubsubsection{\texorpdfstring{ei\_event\_get\_active\_widget()}{ei\_event\_get\_active\_widget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} ei\+\_\+event\+\_\+get\+\_\+active\+\_\+widget (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the widget currently being manipulated by the user.
+
+\begin{DoxyReturn}{Returns}
+The widget currently being manipulated, or NULL. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file ei\+\_\+event.\+c.
+
+\mbox{\Hypertarget{ei__event_8c_a6e8c3b68b3e4c4f55a1d06cd9e0dcfb5}\label{ei__event_8c_a6e8c3b68b3e4c4f55a1d06cd9e0dcfb5}} 
+\index{ei\_event.c@{ei\_event.c}!ei\_event\_get\_default\_handle\_func@{ei\_event\_get\_default\_handle\_func}}
+\index{ei\_event\_get\_default\_handle\_func@{ei\_event\_get\_default\_handle\_func}!ei\_event.c@{ei\_event.c}}
+\doxysubsubsection{\texorpdfstring{ei\_event\_get\_default\_handle\_func()}{ei\_event\_get\_default\_handle\_func()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ei__event_8h_a60fc3d9fa221c2b515e5a7044b2c7452}{ei\+\_\+default\+\_\+handle\+\_\+func\+\_\+t}} ei\+\_\+event\+\_\+get\+\_\+default\+\_\+handle\+\_\+func (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the function that must be called when an event has been received but no processed by any widget.
+
+\begin{DoxyReturn}{Returns}
+The address of the event handling function. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file ei\+\_\+event.\+c.
+
+\mbox{\Hypertarget{ei__event_8c_a939d0278da85e35f45e58326d1182b00}\label{ei__event_8c_a939d0278da85e35f45e58326d1182b00}} 
+\index{ei\_event.c@{ei\_event.c}!ei\_event\_set\_active\_widget@{ei\_event\_set\_active\_widget}}
+\index{ei\_event\_set\_active\_widget@{ei\_event\_set\_active\_widget}!ei\_event.c@{ei\_event.c}}
+\doxysubsubsection{\texorpdfstring{ei\_event\_set\_active\_widget()}{ei\_event\_set\_active\_widget()}}
+{\footnotesize\ttfamily void ei\+\_\+event\+\_\+set\+\_\+active\+\_\+widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget }\end{DoxyParamCaption})}
+
+Sets the widget which is currently being manipulated by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget to declare as active, or NULL to declare that a widget is no more being manipulated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file ei\+\_\+event.\+c.
+
+\mbox{\Hypertarget{ei__event_8c_ab6fbe051400528f4a8201550f2817403}\label{ei__event_8c_ab6fbe051400528f4a8201550f2817403}} 
+\index{ei\_event.c@{ei\_event.c}!ei\_event\_set\_default\_handle\_func@{ei\_event\_set\_default\_handle\_func}}
+\index{ei\_event\_set\_default\_handle\_func@{ei\_event\_set\_default\_handle\_func}!ei\_event.c@{ei\_event.c}}
+\doxysubsubsection{\texorpdfstring{ei\_event\_set\_default\_handle\_func()}{ei\_event\_set\_default\_handle\_func()}}
+{\footnotesize\ttfamily void ei\+\_\+event\+\_\+set\+\_\+default\+\_\+handle\+\_\+func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__event_8h_a60fc3d9fa221c2b515e5a7044b2c7452}{ei\+\_\+default\+\_\+handle\+\_\+func\+\_\+t}}}]{func }\end{DoxyParamCaption})}
+
+Sets the function that must be called when an event has been received but no processed by any widget.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & The event handling function. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file ei\+\_\+event.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ei__event_8c_a9a4f822e380f16c3d8407eac69d3d334}\label{ei__event_8c_a9a4f822e380f16c3d8407eac69d3d334}} 
+\index{ei\_event.c@{ei\_event.c}!ACTIVE\_WIDGET@{ACTIVE\_WIDGET}}
+\index{ACTIVE\_WIDGET@{ACTIVE\_WIDGET}!ei\_event.c@{ei\_event.c}}
+\doxysubsubsection{\texorpdfstring{ACTIVE\_WIDGET}{ACTIVE\_WIDGET}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} ACTIVE\+\_\+\+WIDGET = NULL}
+
+
+
+Definition at line 11 of file ei\+\_\+event.\+c.
+
+\mbox{\Hypertarget{ei__event_8c_a7a77a76fc1e303ce403bb1d9c8cb4654}\label{ei__event_8c_a7a77a76fc1e303ce403bb1d9c8cb4654}} 
+\index{ei\_event.c@{ei\_event.c}!DEFAULT\_HANDLE\_FUNC@{DEFAULT\_HANDLE\_FUNC}}
+\index{DEFAULT\_HANDLE\_FUNC@{DEFAULT\_HANDLE\_FUNC}!ei\_event.c@{ei\_event.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_HANDLE\_FUNC}{DEFAULT\_HANDLE\_FUNC}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ei__event_8h_a60fc3d9fa221c2b515e5a7044b2c7452}{ei\+\_\+default\+\_\+handle\+\_\+func\+\_\+t}} DEFAULT\+\_\+\+HANDLE\+\_\+\+FUNC = NULL}
+
+
+
+Definition at line 10 of file ei\+\_\+event.\+c.
+

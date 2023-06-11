@@ -1,0 +1,111 @@
+\hypertarget{ei__widget__frame_8c}{}\doxysection{ei\+\_\+widget\+\_\+frame.\+c File Reference}
+\label{ei__widget__frame_8c}\index{ei\_widget\_frame.c@{ei\_widget\_frame.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hw\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+draw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+arc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+widget\+\_\+frame.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+application.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} \mbox{\hyperlink{ei__widget__frame_8c_ae1dd37617b4c23167e07bcfa03b6116b}{ei\+\_\+frame\+\_\+allocfunc}} ()
+\begin{DoxyCompactList}\small\item\em A function that allocates a block of memory that is big enough to store the attributes of a widget of a class\+: both the common attributes, that use \mbox{\hyperlink{ei__widgetclass_8c_a53d6c6223218ced0fb2beeea54b53faa}{ei\+\_\+widget\+\_\+struct\+\_\+size}} bytes, and the specific attributes of the class. After allocation, the function {\itshape must} initialize the memory to 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widget__frame_8c_a7c32804cbf9ee4864c26fc7def1278b9}{ei\+\_\+frame\+\_\+releasefunc}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget)
+\begin{DoxyCompactList}\small\item\em A function that releases the memory used by a widget before it is destroyed. The memory used for the \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} structure itself must {\itshape not} be freed by the function. It frees the {\itshape fields} of the structure, if necessary. Can be set to NULL in \mbox{\hyperlink{structei__frame__t}{ei\+\_\+frame\+\_\+t}} if no memory is used by a class of widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widget__frame_8c_a4a477b30c897d1fc53450f0583ad8677}{ei\+\_\+frame\+\_\+drawfunc}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget, \mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}} surface, \mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}} pick\+\_\+surface, \mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} $\ast$clipper)
+\begin{DoxyCompactList}\small\item\em A function that draws a frame. The function must also draw the children of the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widget__frame_8c_a5084259278844615503f2a85d857d144}{ei\+\_\+frame\+\_\+setdefaultsfunc}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget)
+\begin{DoxyCompactList}\small\item\em A function that sets the default values for a frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ei__widget__frame_8c_ae1dd37617b4c23167e07bcfa03b6116b}\label{ei__widget__frame_8c_ae1dd37617b4c23167e07bcfa03b6116b}} 
+\index{ei\_widget\_frame.c@{ei\_widget\_frame.c}!ei\_frame\_allocfunc@{ei\_frame\_allocfunc}}
+\index{ei\_frame\_allocfunc@{ei\_frame\_allocfunc}!ei\_widget\_frame.c@{ei\_widget\_frame.c}}
+\doxysubsubsection{\texorpdfstring{ei\_frame\_allocfunc()}{ei\_frame\_allocfunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} ei\+\_\+frame\+\_\+allocfunc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function that allocates a block of memory that is big enough to store the attributes of a widget of a class\+: both the common attributes, that use \mbox{\hyperlink{ei__widgetclass_8c_a53d6c6223218ced0fb2beeea54b53faa}{ei\+\_\+widget\+\_\+struct\+\_\+size}} bytes, and the specific attributes of the class. After allocation, the function {\itshape must} initialize the memory to 0. 
+
+\begin{DoxyReturn}{Returns}
+A block of memory big enough to represent a widget of this class, with all bytes set to 0. 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file ei\+\_\+widget\+\_\+frame.\+c.
+
+\mbox{\Hypertarget{ei__widget__frame_8c_a4a477b30c897d1fc53450f0583ad8677}\label{ei__widget__frame_8c_a4a477b30c897d1fc53450f0583ad8677}} 
+\index{ei\_widget\_frame.c@{ei\_widget\_frame.c}!ei\_frame\_drawfunc@{ei\_frame\_drawfunc}}
+\index{ei\_frame\_drawfunc@{ei\_frame\_drawfunc}!ei\_widget\_frame.c@{ei\_widget\_frame.c}}
+\doxysubsubsection{\texorpdfstring{ei\_frame\_drawfunc()}{ei\_frame\_drawfunc()}}
+{\footnotesize\ttfamily void ei\+\_\+frame\+\_\+drawfunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget,  }\item[{\mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}}}]{surface,  }\item[{\mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}}}]{pick\+\_\+surface,  }\item[{\mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} $\ast$}]{clipper }\end{DoxyParamCaption})}
+
+
+
+A function that draws a frame. The function must also draw the children of the widget. 
+
+A function that draws a frame.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & A pointer to the widget instance to draw. \\
+\hline
+{\em surface} & A locked surface where to draw the widget. The actual location of the widget in the surface is stored in its \char`\"{}screen\+\_\+location\char`\"{} field. \\
+\hline
+{\em pick\+\_\+surface} & The picking offscreen. \\
+\hline
+{\em clipper} & If not NULL, the drawing is restricted within this rectangle (expreei\+\_\+widgetclass\+\_\+allocfunc\+\_\+t $\ast$) ssed in the surface reference frame). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file ei\+\_\+widget\+\_\+frame.\+c.
+
+\mbox{\Hypertarget{ei__widget__frame_8c_a7c32804cbf9ee4864c26fc7def1278b9}\label{ei__widget__frame_8c_a7c32804cbf9ee4864c26fc7def1278b9}} 
+\index{ei\_widget\_frame.c@{ei\_widget\_frame.c}!ei\_frame\_releasefunc@{ei\_frame\_releasefunc}}
+\index{ei\_frame\_releasefunc@{ei\_frame\_releasefunc}!ei\_widget\_frame.c@{ei\_widget\_frame.c}}
+\doxysubsubsection{\texorpdfstring{ei\_frame\_releasefunc()}{ei\_frame\_releasefunc()}}
+{\footnotesize\ttfamily void ei\+\_\+frame\+\_\+releasefunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget }\end{DoxyParamCaption})}
+
+
+
+A function that releases the memory used by a widget before it is destroyed. The memory used for the \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} structure itself must {\itshape not} be freed by the function. It frees the {\itshape fields} of the structure, if necessary. Can be set to NULL in \mbox{\hyperlink{structei__frame__t}{ei\+\_\+frame\+\_\+t}} if no memory is used by a class of widget. 
+
+A function that releases the memory used by a widget before it is destroyed. The memory used for the \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} structure itself must {\itshape not} be freed by the function. It frees the {\itshape fields} of the structure, if necessary. Can be set to NULL in \mbox{\hyperlink{structei__button__t}{ei\+\_\+button\+\_\+t}} if no memory is used by a class of widget.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget which resources are to be freed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file ei\+\_\+widget\+\_\+frame.\+c.
+
+\mbox{\Hypertarget{ei__widget__frame_8c_a5084259278844615503f2a85d857d144}\label{ei__widget__frame_8c_a5084259278844615503f2a85d857d144}} 
+\index{ei\_widget\_frame.c@{ei\_widget\_frame.c}!ei\_frame\_setdefaultsfunc@{ei\_frame\_setdefaultsfunc}}
+\index{ei\_frame\_setdefaultsfunc@{ei\_frame\_setdefaultsfunc}!ei\_widget\_frame.c@{ei\_widget\_frame.c}}
+\doxysubsubsection{\texorpdfstring{ei\_frame\_setdefaultsfunc()}{ei\_frame\_setdefaultsfunc()}}
+{\footnotesize\ttfamily void ei\+\_\+frame\+\_\+setdefaultsfunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget }\end{DoxyParamCaption})}
+
+
+
+A function that sets the default values for a frame. 
+
+ei\+\_\+frame\+\_\+allocfunc
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & A pointer to the widget instance to initialize. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file ei\+\_\+widget\+\_\+frame.\+c.
+

@@ -1,0 +1,1 @@
+/bin/cc  -Wall -Wextra -Wno-unknown-pragmas -Wno-unused-parameter -Werror -rdynamic CMakeFiles/minesweeper.dir/tests/minesweeper.c.o -o minesweeper  libei.a ../_x11/libeibase.a -L/user/3/.base/badaouii/home/projet_c/projet_c_ig/_x11 -lfreeimage -lSDL2 -lSDL2_ttf -lm 

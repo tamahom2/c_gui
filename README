@@ -1,0 +1,40 @@
+Répertoire "racine" du projet.
+
+Il contient le fichier CMakeLists.txt utilisé par cmake pour construire le projet.
+
+Ne lancez pas cmake directement depuis ce répertoire car cmake génère beaucoup de fichiers. Lancez cmake depuis le répertoire "cmake", ou mieux, construisez votre projet avec CLion (qui s'occupe d'appeler cmake): lisez clion/README.
+
+
+# Tests
+
+## lines.c
+
+On a testé les ei_fill, ei_polyline et le clipping
+
+## button_frame.c
+
+On a testé les fonctions de ei_arc et le ei_polygon
+
+## frame.c
+
+On a testé la première widget frame
+
+## button.c
+
+On a testé le widget button avec la gestion d'événements et l'écriture du texte
+
+## hello_world.c
+
+On a testé le toplevel, avec la gestion d'événements et la gestion géométrique.
+
+## puzzle.c
+
+On a testé le toplevel avec le dessin d'image pour pouvoir jouer au jeu du taquin
+
+## minesweeper.c
+
+On a testé le toplevel avec plusieurs fils, et aussi la rapidité de notre code.
+
+## two048.c
+
+Le meilleur jeu de tous les temps, j'ai passé beaucoup de temps à y jouer.

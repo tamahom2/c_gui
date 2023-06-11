@@ -1,0 +1,87 @@
+\hypertarget{ei__arc_8h}{}\doxysection{ei\+\_\+arc.\+h File Reference}
+\label{ei__arc_8h}\index{ei\_arc.h@{ei\_arc.h}}
+
+
+Private definitions.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+draw.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ei__arc_8h_a23ba0ae2c6c7dfba2e1fdbcf95949c39}{arc}} (\mbox{\hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t}} $\ast$points, int total\+\_\+points, \mbox{\hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t}} center, int radius, int angle\+\_\+start, int angle\+\_\+finish)
+\begin{DoxyCompactList}\small\item\em Creates a list of points that represents an arc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__arc_8h_a0e022953e450acc9d96c5198f7511584}{rounded\+\_\+frame}} (\mbox{\hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t}} $\ast$$\ast$pts, \mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} rect, int radius, int total)
+\begin{DoxyCompactList}\small\item\em Creates a list of points that represents a rounded frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__arc_8h_aa2ec2681c45f15fde3486e0873371cbb}{draw\+\_\+button}} (\mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}} surface, \mbox{\hyperlink{structei__color__t}{ei\+\_\+color\+\_\+t}} color, \mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} big\+\_\+frame, \mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} small\+\_\+frame, int radius\+\_\+big, int radius\+\_\+small, \mbox{\hyperlink{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270b}{ei\+\_\+relief\+\_\+t}} relief, const \mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} $\ast$clipper)
+\begin{DoxyCompactList}\small\item\em Draws a button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Private definitions. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ei__arc_8h_a23ba0ae2c6c7dfba2e1fdbcf95949c39}\label{ei__arc_8h_a23ba0ae2c6c7dfba2e1fdbcf95949c39}} 
+\index{ei\_arc.h@{ei\_arc.h}!arc@{arc}}
+\index{arc@{arc}!ei\_arc.h@{ei\_arc.h}}
+\doxysubsubsection{\texorpdfstring{arc()}{arc()}}
+{\footnotesize\ttfamily void arc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t}} $\ast$}]{points,  }\item[{int}]{total\+\_\+points,  }\item[{\mbox{\hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t}}}]{center,  }\item[{int}]{radius,  }\item[{int}]{angle\+\_\+start,  }\item[{int}]{angle\+\_\+finish }\end{DoxyParamCaption})}
+
+
+
+Creates a list of points that represents an arc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & ~\newline
+ \\
+\hline
+{\em total\+\_\+points} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file ei\+\_\+arc.\+c.
+
+\mbox{\Hypertarget{ei__arc_8h_aa2ec2681c45f15fde3486e0873371cbb}\label{ei__arc_8h_aa2ec2681c45f15fde3486e0873371cbb}} 
+\index{ei\_arc.h@{ei\_arc.h}!draw\_button@{draw\_button}}
+\index{draw\_button@{draw\_button}!ei\_arc.h@{ei\_arc.h}}
+\doxysubsubsection{\texorpdfstring{draw\_button()}{draw\_button()}}
+{\footnotesize\ttfamily void draw\+\_\+button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}}}]{surface,  }\item[{\mbox{\hyperlink{structei__color__t}{ei\+\_\+color\+\_\+t}}}]{color,  }\item[{\mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}}}]{big\+\_\+frame,  }\item[{\mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}}}]{small\+\_\+frame,  }\item[{int}]{radius\+\_\+big,  }\item[{int}]{radius\+\_\+small,  }\item[{\mbox{\hyperlink{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270b}{ei\+\_\+relief\+\_\+t}}}]{relief,  }\item[{const \mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} $\ast$}]{clipper }\end{DoxyParamCaption})}
+
+
+
+Draws a button. 
+
+
+
+Definition at line 132 of file ei\+\_\+arc.\+c.
+
+\mbox{\Hypertarget{ei__arc_8h_a0e022953e450acc9d96c5198f7511584}\label{ei__arc_8h_a0e022953e450acc9d96c5198f7511584}} 
+\index{ei\_arc.h@{ei\_arc.h}!rounded\_frame@{rounded\_frame}}
+\index{rounded\_frame@{rounded\_frame}!ei\_arc.h@{ei\_arc.h}}
+\doxysubsubsection{\texorpdfstring{rounded\_frame()}{rounded\_frame()}}
+{\footnotesize\ttfamily void rounded\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t}} $\ast$$\ast$}]{pts,  }\item[{\mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}}}]{rect,  }\item[{int}]{radius,  }\item[{int}]{total }\end{DoxyParamCaption})}
+
+
+
+Creates a list of points that represents a rounded frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & ~\newline
+ \\
+\hline
+{\em rect} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file ei\+\_\+arc.\+c.
+

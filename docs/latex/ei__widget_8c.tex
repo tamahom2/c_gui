@@ -1,0 +1,86 @@
+\hypertarget{ei__widget_8c}{}\doxysection{ei\+\_\+widget.\+c File Reference}
+\label{ei__widget_8c}\index{ei\_widget.c@{ei\_widget.c}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+widget.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+implementation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+application.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+event.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} \mbox{\hyperlink{ei__widget_8c_af05d9b442d1c9ac845dc74d64f7f7239}{ei\+\_\+widget\+\_\+create}} (\mbox{\hyperlink{ei__types_8h_a54e9efab809a177e0b5df09529a6d32c}{ei\+\_\+const\+\_\+string\+\_\+t}} class\+\_\+name, \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} parent, \mbox{\hyperlink{ei__types_8h_a851d40b095b5bf6f3b8733f0a09c820b}{ei\+\_\+user\+\_\+param\+\_\+t}} user\+\_\+data, \mbox{\hyperlink{ei__widget_8h_ab58bdc73d94efb5e0cf0a1893eec910b}{ei\+\_\+widget\+\_\+destructor\+\_\+t}} destructor)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of a widget of some particular class, as a descendant of an existing widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widget_8c_aedbe2a89b8e68342362710a55ee1858b}{ei\+\_\+widget\+\_\+destroy}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget)
+\begin{DoxyCompactList}\small\item\em Destroys a widget. Removes the widget from the screen if it is currently displayed. Destroys all its descendants. Calls its destructor if it was provided. Frees the memory used by the widget (e.\+g. the widget param). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ei__widget_8c_a5e878489bb9f8948111251eea485338d}{PICK\+\_\+\+ID\+\_\+\+GLOBAL}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ei__widget_8c_af05d9b442d1c9ac845dc74d64f7f7239}\label{ei__widget_8c_af05d9b442d1c9ac845dc74d64f7f7239}} 
+\index{ei\_widget.c@{ei\_widget.c}!ei\_widget\_create@{ei\_widget\_create}}
+\index{ei\_widget\_create@{ei\_widget\_create}!ei\_widget.c@{ei\_widget.c}}
+\doxysubsubsection{\texorpdfstring{ei\_widget\_create()}{ei\_widget\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} ei\+\_\+widget\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__types_8h_a54e9efab809a177e0b5df09529a6d32c}{ei\+\_\+const\+\_\+string\+\_\+t}}}]{class\+\_\+name,  }\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{parent,  }\item[{\mbox{\hyperlink{ei__types_8h_a851d40b095b5bf6f3b8733f0a09c820b}{ei\+\_\+user\+\_\+param\+\_\+t}}}]{user\+\_\+data,  }\item[{\mbox{\hyperlink{ei__widget_8h_ab58bdc73d94efb5e0cf0a1893eec910b}{ei\+\_\+widget\+\_\+destructor\+\_\+t}}}]{destructor }\end{DoxyParamCaption})}
+
+
+
+Creates a new instance of a widget of some particular class, as a descendant of an existing widget. 
+
+The widget is not displayed on screen until it is managed by a geometry manager. When no more needed, the widget must be released by calling \mbox{\hyperlink{ei__widget_8c_aedbe2a89b8e68342362710a55ee1858b}{ei\+\_\+widget\+\_\+destroy}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+\_\+name} & The name of the class of the widget that is to be created. \\
+\hline
+{\em parent} & A pointer to the parent widget. Can not be NULL. \\
+\hline
+{\em user\+\_\+data} & A pointer provided by the programmer for private use. May be NULL. \\
+\hline
+{\em destructor} & A pointer to a function to call before destroying a widget structure. May be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created widget, or NULL if there was an error. 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file ei\+\_\+widget.\+c.
+
+\mbox{\Hypertarget{ei__widget_8c_aedbe2a89b8e68342362710a55ee1858b}\label{ei__widget_8c_aedbe2a89b8e68342362710a55ee1858b}} 
+\index{ei\_widget.c@{ei\_widget.c}!ei\_widget\_destroy@{ei\_widget\_destroy}}
+\index{ei\_widget\_destroy@{ei\_widget\_destroy}!ei\_widget.c@{ei\_widget.c}}
+\doxysubsubsection{\texorpdfstring{ei\_widget\_destroy()}{ei\_widget\_destroy()}}
+{\footnotesize\ttfamily void ei\+\_\+widget\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget }\end{DoxyParamCaption})}
+
+
+
+Destroys a widget. Removes the widget from the screen if it is currently displayed. Destroys all its descendants. Calls its destructor if it was provided. Frees the memory used by the widget (e.\+g. the widget param). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget that is to be destroyed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file ei\+\_\+widget.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ei__widget_8c_a5e878489bb9f8948111251eea485338d}\label{ei__widget_8c_a5e878489bb9f8948111251eea485338d}} 
+\index{ei\_widget.c@{ei\_widget.c}!PICK\_ID\_GLOBAL@{PICK\_ID\_GLOBAL}}
+\index{PICK\_ID\_GLOBAL@{PICK\_ID\_GLOBAL}!ei\_widget.c@{ei\_widget.c}}
+\doxysubsubsection{\texorpdfstring{PICK\_ID\_GLOBAL}{PICK\_ID\_GLOBAL}}
+{\footnotesize\ttfamily int PICK\+\_\+\+ID\+\_\+\+GLOBAL = 0}
+
+
+
+Definition at line 10 of file ei\+\_\+widget.\+c.
+

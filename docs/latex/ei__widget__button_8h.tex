@@ -1,0 +1,160 @@
+\hypertarget{ei__widget__button_8h}{}\doxysection{ei\+\_\+widget\+\_\+button.\+h File Reference}
+\label{ei__widget__button_8h}\index{ei\_widget\_button.h@{ei\_widget\_button.h}}
+{\ttfamily \#include \char`\"{}ei\+\_\+widget\+\_\+frame.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ei\+\_\+widget.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structei__button__t}{ei\+\_\+button\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A structure that stores information about a button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structei__button__t}{ei\+\_\+button\+\_\+t}} \mbox{\hyperlink{ei__widget__button_8h_ab396a6ffeed7d59ce4f8bdcd54e81791}{ei\+\_\+button\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A structure that stores information about a button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{ei__widget__button_8h_a9cedf2591c18c423d3d2a3c56cdef993}{ei\+\_\+button\+\_\+handlefunc}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget, struct \mbox{\hyperlink{structei__event__t}{ei\+\_\+event\+\_\+t}} $\ast$event)
+\begin{DoxyCompactList}\small\item\em A function that is called in response to an event. This function is internal to the library. It implements the generic behavior of a widget (for example a button looks sunken when clicked) button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widget__button_8h_a7a39a0c443337ffab49d813322f95bc3}{ei\+\_\+button\+\_\+setdefaultsfunc}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget)
+\begin{DoxyCompactList}\small\item\em A function that sets the default values for a button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widget__button_8h_a8b2fb2a8526b1478e003349dd576daba}{ei\+\_\+button\+\_\+drawfunc}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget, \mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}} surface, \mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}} pick\+\_\+surface, \mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} $\ast$clipper)
+\begin{DoxyCompactList}\small\item\em A function that draws a button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} \mbox{\hyperlink{ei__widget__button_8h_a7697b938fbe5f9d307f34123fb062e8a}{ei\+\_\+button\+\_\+allocfunc}} ()
+\begin{DoxyCompactList}\small\item\em A function that allocates a block of memory that is big enough to store the attributes of a widget of a class\+: both the common attributes, that use \mbox{\hyperlink{ei__widgetclass_8c_a53d6c6223218ced0fb2beeea54b53faa}{ei\+\_\+widget\+\_\+struct\+\_\+size}} bytes, and the specific attributes of the class. After allocation, the function {\itshape must} initialize the memory to 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ei__widget__button_8h_ab54ebc24563085e9a2829c1d2d42a11a}{ei\+\_\+button\+\_\+releasefunc}} (\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} widget)
+\begin{DoxyCompactList}\small\item\em A function that releases the memory used by a widget before it is destroyed. The memory used for the \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} structure itself must {\itshape not} be freed by the function. It frees the {\itshape fields} of the structure, if necessary. Can be set to NULL in \mbox{\hyperlink{structei__button__t}{ei\+\_\+button\+\_\+t}} if no memory is used by a class of widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ei__widget__button_8h_ab396a6ffeed7d59ce4f8bdcd54e81791}\label{ei__widget__button_8h_ab396a6ffeed7d59ce4f8bdcd54e81791}} 
+\index{ei\_widget\_button.h@{ei\_widget\_button.h}!ei\_button\_t@{ei\_button\_t}}
+\index{ei\_button\_t@{ei\_button\_t}!ei\_widget\_button.h@{ei\_widget\_button.h}}
+\doxysubsubsection{\texorpdfstring{ei\_button\_t}{ei\_button\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structei__button__t}{ei\+\_\+button\+\_\+t}} \mbox{\hyperlink{structei__button__t}{ei\+\_\+button\+\_\+t}}}
+
+
+
+A structure that stores information about a button. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ei__widget__button_8h_a7697b938fbe5f9d307f34123fb062e8a}\label{ei__widget__button_8h_a7697b938fbe5f9d307f34123fb062e8a}} 
+\index{ei\_widget\_button.h@{ei\_widget\_button.h}!ei\_button\_allocfunc@{ei\_button\_allocfunc}}
+\index{ei\_button\_allocfunc@{ei\_button\_allocfunc}!ei\_widget\_button.h@{ei\_widget\_button.h}}
+\doxysubsubsection{\texorpdfstring{ei\_button\_allocfunc()}{ei\_button\_allocfunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} ei\+\_\+button\+\_\+allocfunc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function that allocates a block of memory that is big enough to store the attributes of a widget of a class\+: both the common attributes, that use \mbox{\hyperlink{ei__widgetclass_8c_a53d6c6223218ced0fb2beeea54b53faa}{ei\+\_\+widget\+\_\+struct\+\_\+size}} bytes, and the specific attributes of the class. After allocation, the function {\itshape must} initialize the memory to 0. 
+
+\begin{DoxyReturn}{Returns}
+A block of memory big enough to represent a widget of this class, with all bytes set to 0. 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file ei\+\_\+widget\+\_\+button.\+c.
+
+\mbox{\Hypertarget{ei__widget__button_8h_a8b2fb2a8526b1478e003349dd576daba}\label{ei__widget__button_8h_a8b2fb2a8526b1478e003349dd576daba}} 
+\index{ei\_widget\_button.h@{ei\_widget\_button.h}!ei\_button\_drawfunc@{ei\_button\_drawfunc}}
+\index{ei\_button\_drawfunc@{ei\_button\_drawfunc}!ei\_widget\_button.h@{ei\_widget\_button.h}}
+\doxysubsubsection{\texorpdfstring{ei\_button\_drawfunc()}{ei\_button\_drawfunc()}}
+{\footnotesize\ttfamily void ei\+\_\+button\+\_\+drawfunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget,  }\item[{\mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}}}]{surface,  }\item[{\mbox{\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t}}}]{pick\+\_\+surface,  }\item[{\mbox{\hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}} $\ast$}]{clipper }\end{DoxyParamCaption})}
+
+
+
+A function that draws a button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & A pointer to the widget instance to draw. \\
+\hline
+{\em surface} & A locked surface where to draw the widget. The actual location of the widget in the surface is stored in its \char`\"{}screen\+\_\+location\char`\"{} field. \\
+\hline
+{\em pick\+\_\+surface} & The picking offscreen. \\
+\hline
+{\em clipper} & If not NULL, the drawing is restricted within this rectangle (expreei\+\_\+widgetclass\+\_\+allocfunc\+\_\+t $\ast$) ssed in the surface reference button).\\
+\hline
+\end{DoxyParams}
+A function that draws a button.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & A pointer to the widget instance to draw. \\
+\hline
+{\em surface} & A locked surface where to draw the widget. The actual location of the widget in the surface is stored in its \char`\"{}screen\+\_\+location\char`\"{} field. \\
+\hline
+{\em pick\+\_\+surface} & The picking offscreen. \\
+\hline
+{\em clipper} & If not NULL, the drawing is restricted within this rectangle (expreei\+\_\+widgetclass\+\_\+allocfunc\+\_\+t $\ast$) ssed in the surface reference button). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file ei\+\_\+widget\+\_\+button.\+c.
+
+\mbox{\Hypertarget{ei__widget__button_8h_a9cedf2591c18c423d3d2a3c56cdef993}\label{ei__widget__button_8h_a9cedf2591c18c423d3d2a3c56cdef993}} 
+\index{ei\_widget\_button.h@{ei\_widget\_button.h}!ei\_button\_handlefunc@{ei\_button\_handlefunc}}
+\index{ei\_button\_handlefunc@{ei\_button\_handlefunc}!ei\_widget\_button.h@{ei\_widget\_button.h}}
+\doxysubsubsection{\texorpdfstring{ei\_button\_handlefunc()}{ei\_button\_handlefunc()}}
+{\footnotesize\ttfamily bool ei\+\_\+button\+\_\+handlefunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget,  }\item[{struct \mbox{\hyperlink{structei__event__t}{ei\+\_\+event\+\_\+t}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+A function that is called in response to an event. This function is internal to the library. It implements the generic behavior of a widget (for example a button looks sunken when clicked) button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget for which the event was generated. \\
+\hline
+{\em event} & The event containing all its parameters (type, etc.)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean telling if the event was consumed by the callback or not. If true, the library does not try to call other callbacks for this event. If false, the library will call the next callback registered for this event, if any. Note\+: The callback may execute many operations and still return false, or return true without having done anything. 
+\end{DoxyReturn}
+
+
+Definition at line 210 of file ei\+\_\+widget\+\_\+button.\+c.
+
+\mbox{\Hypertarget{ei__widget__button_8h_ab54ebc24563085e9a2829c1d2d42a11a}\label{ei__widget__button_8h_ab54ebc24563085e9a2829c1d2d42a11a}} 
+\index{ei\_widget\_button.h@{ei\_widget\_button.h}!ei\_button\_releasefunc@{ei\_button\_releasefunc}}
+\index{ei\_button\_releasefunc@{ei\_button\_releasefunc}!ei\_widget\_button.h@{ei\_widget\_button.h}}
+\doxysubsubsection{\texorpdfstring{ei\_button\_releasefunc()}{ei\_button\_releasefunc()}}
+{\footnotesize\ttfamily void ei\+\_\+button\+\_\+releasefunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget }\end{DoxyParamCaption})}
+
+
+
+A function that releases the memory used by a widget before it is destroyed. The memory used for the \mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}} structure itself must {\itshape not} be freed by the function. It frees the {\itshape fields} of the structure, if necessary. Can be set to NULL in \mbox{\hyperlink{structei__button__t}{ei\+\_\+button\+\_\+t}} if no memory is used by a class of widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget which resources are to be freed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file ei\+\_\+widget\+\_\+button.\+c.
+
+\mbox{\Hypertarget{ei__widget__button_8h_a7a39a0c443337ffab49d813322f95bc3}\label{ei__widget__button_8h_a7a39a0c443337ffab49d813322f95bc3}} 
+\index{ei\_widget\_button.h@{ei\_widget\_button.h}!ei\_button\_setdefaultsfunc@{ei\_button\_setdefaultsfunc}}
+\index{ei\_button\_setdefaultsfunc@{ei\_button\_setdefaultsfunc}!ei\_widget\_button.h@{ei\_widget\_button.h}}
+\doxysubsubsection{\texorpdfstring{ei\_button\_setdefaultsfunc()}{ei\_button\_setdefaultsfunc()}}
+{\footnotesize\ttfamily void ei\+\_\+button\+\_\+setdefaultsfunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ei__widgetclass_8h_a35b52beecc62073de9c4c23e686686b8}{ei\+\_\+widget\+\_\+t}}}]{widget }\end{DoxyParamCaption})}
+
+
+
+A function that sets the default values for a button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & A pointer to the widget instance to initialize. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 185 of file ei\+\_\+widget\+\_\+button.\+c.
+
